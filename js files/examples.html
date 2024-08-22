@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            //function prototype
+            function addition(a,b){
+              return(a+b)
+            }
+            let r2=addition(1,2)
+            console.log("addition of two nums is:"+r2);
+
+            //function expression 
+            let sub=function(a,b){
+              return(a-b)
+            }
+            let result=sub(2,1)
+            console.log("subtraction of two nums is:"+result);
+
+            //  Arrow function
+            let add=(a,b)=>console.log(a+b) 
+            add(1,7);
+
+            // Arrow square function 
+            let cube=n=>(n*n*n)
+            let r=cube(2);
+            console.log("cube of a given number is:"+r)
+
+            // IIFE function
+            let m=((a,b)=>{return a+b})
+            (1,2);
+            console.log("addition of two nums is:"+m)
+            
+            // IIFE cube function
+            let r1=(n=>n*n)
+            (2);
+            console.log("cube of a given number is:"+r1);
+        
+            //IIFE FUN
+            let msg= (()=>{console.log("hello")})
+            ()
+             
+            //back tikcs(``) usage1
+            function info(id,name,age){
+              let msg=`my id is:${id},name is:${name}and age is:${age}`
+              console.log(msg)
+            }
+            info(1,"saketh",11)
+
+            //back tikcs(``) usage2
+            let n=`
+            in
+            love
+            india`
+            console.log(n);
+
+            //back tikcs(``) usage3
+            let b=`mr's" saketh"`
+            console.log(b);
+
+            //defalt perameters
+            function info(id=0,name="",age=0){
+              let msg=`my id is:${id},name is:${name}and age is:${age}`
+              console.log(msg)
+            }
+            info(1,"saketh",11)
+            info()
+            info(1)
+
+
+        </script>
+    </head>
+</html>
