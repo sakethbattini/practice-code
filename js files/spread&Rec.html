@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>spread operator and nested functions examples</title>
+        <script>
+            //spread operator
+            let array1=[1,2,3]
+            let array2=[4,5,6]
+            let array3=[...array1,...array2]
+            console.log(array3)
+
+            //nested functions
+            function one(){
+                console.log("one")
+                function two(){
+                    console.log("two")
+                    function three(){
+                        console.log("three")
+                    }
+                    three()
+                }
+                two()
+            }
+            one()
+
+            //another example for nested function
+            function one1(){
+                console.log("second example o/p; one")
+                function two2(){
+                    console.log("two")
+                    function three3(){
+                        console.log("three")
+                    }
+                    three3()  // here this o/p is not showing because we are not calling it first(two()) fun
+                }
+                
+            }
+            one1()
+            
+            //nested function example 3
+            function a(x){
+                function b(y){
+                    //console.log(z) it will give error as z is not defined
+                    function c(z){
+                        console.log(`add of xyz o/p: ${x+y+z}`)
+                    }
+                    c(3)
+                }
+                b(2)
+            }
+            a(1)
+
+            //nested function eith return statement example 3
+            function a1(x){
+                function b2(y){
+                    //console.log(z) it will give error as z is not defined
+                    function c3(z){
+                        return (`add of xyz with return o/p: ${x+y+z}`)
+                    }
+                    let r=c3(3)
+                    console.log(r)
+                }
+                b2(2)
+            }
+            a1(1)
+            
+
+
+
+
+
+        </script>
+    </head>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Nested Functions examples</title>
+        <script>
+            //without nested functions
+            function total(i1,i2,i3){
+            return (i1+i2+i3)
+            }
+            function discount(i1,i2,i3){
+            let totalBill=total(i1,i2,i3)
+            let billAfterDiscount=totalBill-(totalBill*5)/100
+            return billAfterDiscount;
+            }
+            function withGst(i1,i2,i3){
+            let afterDiscount=discount(i1,i2,i3)
+            let afterGst=afterDiscount+(afterDiscount*18)/100
+            return afterGst
+            }
+            let result=withGst(100,300,600)
+            console.log("Total Bill with GST: "+result);
+
+
+            //nested functions
+            function withGst(i1,i2,i3)
+            {
+                function total(i1,i2,i3)
+                {
+                return (i1+i2+i3)
+                }
+                function discount(i1,i2,i3)
+                {
+                let totalBill=total(i1,i2,i3)
+                let billAfterDiscount=totalBill-(totalBill*5)/100
+                return billAfterDiscount;
+                }
+                let afterDiscount=discount(i1,i2,i3)
+                let afterGst=afterDiscount+(afterDiscount*18)/100
+                return afterGst
+            }
+            let result2=withGst(100,300,600)
+            console.log("Total Bill with GST: "+result2);
+        </script>
+    </head>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Recurssion examples</title>
+        <script>
+            //recurssion example 1
+            function wish(){
+                console.log("good morning")
+                // wish() calling ifself
+            }
+            wish()
+
+            //recurssion example 3
+            function doSum(n){
+              let m=1
+              for (let i=1; i<=n; i++){
+                m=m*i
+              }
+              return m
+             }
+             let r=doSum(4)
+             // console.log(r)
+
+            //recurssion example without return statement
+            function doSum(n){
+            let f=1
+            for (let i=1; i<=n; i++){
+               f=f*i
+            }
+            console.log(f)
+            }
+            doSum(5)
+
+          
+
+            
+        </script>
+    </head>
+    <body>
+        <h1>welcome to recurssion</h1> 
+    </body>
+</html>
